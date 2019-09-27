@@ -19,38 +19,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="TUx-39-E4O" kind="relationship" relationship="rootViewController" id="rb4-UH-cJC"/>
+                        <segue destination="wiB-vO-w8f" kind="relationship" relationship="rootViewController" id="jeq-Xg-jeC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0l-82-Zya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-662" y="139"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Pe1-RK-VHt">
-            <objects>
-                <viewController id="TUx-39-E4O" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="luc-23-lrw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGb-zL-gcl">
-                                <rect key="frame" x="20" y="114" width="123" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Lista restaurantes"/>
-                                <connections>
-                                    <segue destination="wiB-vO-w8f" kind="show" id="qgG-ii-Kor"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="E97-iQ-PKt"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="h4m-yk-TsX"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Xq-tG-J1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="120" y="139"/>
+            <point key="canvasLocation" x="58" y="-165"/>
         </scene>
         <!--Restaurantes Controller-->
         <scene sceneID="esC-m6-T3I">
@@ -95,6 +69,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DXp-Sh-yNW"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9o9-An-zrG"/>
                     <connections>
                         <outlet property="tvRestaurantes" destination="7ih-uW-Qqm" id="SLV-Ve-DiO"/>
                     </connections>
