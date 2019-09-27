@@ -11,11 +11,19 @@ import UIKit
 
 class RestaurantesController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    
     var restaurantes: [Restaurante] = []
+    
+    @IBOutlet weak var tvRestaurantes: UITableView!
+    
     
     override func viewDidLoad() {
         
-        restaurantes.append(Restaurante(direccion: "String", telefono: <#T##Int#>, descripcion: "<#T##String#>"))
+        restaurantes.append(Restaurante(nombre: "Pollo Lopez", direccion: "Lopez Mateos #6", telefono: 6225894120, descripcion: "Restaurante de pollo asado"))
+        restaurantes.append(Restaurante(nombre: "Mochomos", direccion: "Paco s/n", telefono: 6879123054, descripcion: "Carne en su jugo y variedad"))
+        restaurantes.append(Restaurante(nombre: "Chilangos", direccion: "Ave. Rony y mayo", telefono: 5558971230, descripcion: "Cocina express"))
+        
         
     }
     
@@ -24,15 +32,29 @@ class RestaurantesController : UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        return restaurantes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celdaRestaurante")
+        
+        celda?.textLabel?.text = restaurantes[indexPath.row].nombre
+        
+        return celda!
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        
+        if segue.identifier == "goToDetalleRestaurante" {
+            
+            let destino = segue.destination as? DetallesRestauranteController
+            destino?.restaurante = restaurantes[tvRestaurantes.indexPathForSelectedRow!.row]
+            
+            
+        }
+        
     }
     
 }

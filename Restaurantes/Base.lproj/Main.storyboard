@@ -65,32 +65,39 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="celdaRestaurante" id="4Py-k5-u3A">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="celdaRestaurante" textLabel="KDh-yQ-a9v" style="IBUITableViewCellStyleDefault" id="4Py-k5-u3A">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Py-k5-u3A" id="trf-O6-bq1">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zq5-oK-Aig">
-                                                    <rect key="frame" x="25" y="8" width="120" height="28"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KDh-yQ-a9v">
+                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="5zX-kn-bwn" kind="show" id="TBF-8G-JPl"/>
+                                            <segue destination="5zX-kn-bwn" kind="show" identifier="goToDetalleRestaurante" id="TBF-8G-JPl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wiB-vO-w8f" id="5hu-Q5-vS3"/>
+                                    <outlet property="delegate" destination="wiB-vO-w8f" id="yjK-Cp-c0J"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DXp-Sh-yNW"/>
                     </view>
+                    <connections>
+                        <outlet property="tvRestaurantes" destination="7ih-uW-Qqm" id="SLV-Ve-DiO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLb-0J-TJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -158,6 +165,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pgp-Dd-s2R"/>
                     </view>
+                    <connections>
+                        <outlet property="lblDescripcion" destination="isI-Yc-xul" id="53p-V9-h5s"/>
+                        <outlet property="lblDireccion" destination="Pwt-vQ-fdb" id="97N-H3-xz5"/>
+                        <outlet property="lblNumeroTelefono" destination="Tft-VM-CI9" id="myC-TR-dpj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p4t-Bs-5Mc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

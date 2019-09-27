@@ -10,15 +10,18 @@ import Foundation
 
 class Restaurante {
     
+    var nombre : String?
+    
     var direccion : String?
     var telefono : Int?
     var descripcion : String?
     
-    init(direccion: String, telefono: Int, descripcion: String) {
+    init(nombre: String, direccion: String, telefono: Int, descripcion: String) {
         
+        self.nombre = nombre
         self.direccion = direccion
         self.telefono = telefono
-        self.direccion = descripcion
+        self.descripcion = descripcion
         
     }
     

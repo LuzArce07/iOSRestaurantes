@@ -11,11 +11,23 @@ import UIKit
 
 class DetallesRestauranteController: UIViewController {
     
-    //var restaurante : Restaurante?
+    var restaurante : Restaurante?
+    
+    
+    
+    @IBOutlet weak var lblDireccion: UILabel!
+    @IBOutlet weak var lblNumeroTelefono: UILabel!
+    @IBOutlet weak var lblDescripcion: UILabel!
+    
     
     override func viewDidLoad() {
         
-        //self.title = restaurante!
+        self.title = restaurante!.nombre!
+        
+        lblDireccion.text = restaurante!.direccion!
+        lblNumeroTelefono.text = "\(restaurante!.telefono!)"
+        lblDescripcion.text = restaurante!.descripcion!
+        
         
     }
     
